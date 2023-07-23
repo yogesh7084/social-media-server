@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import AuthRoute from './Routes/AuthRoutes.js'
+import UserRoutes from './Routes/UserRoutes.js'
 
 dotenv.config();
 
@@ -30,4 +31,5 @@ mongoose.connect(
 
 // Routess
 
-app.use('/auth', AuthRoute)
+app.use('/auth', AuthRoute);
+app.use('/user', UserRoutes);
