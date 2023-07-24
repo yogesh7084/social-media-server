@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import AuthRoute from './Routes/AuthRoutes.js'
 import UserRoutes from './Routes/UserRoutes.js'
+import PostRoutes from './Routes/PostRoutes.js'
 
 dotenv.config();
 
@@ -33,3 +34,4 @@ mongoose.connect(
 
 app.use('/auth', AuthRoute);
 app.use('/user', UserRoutes);
+app.use('/post', PostRoutes)
